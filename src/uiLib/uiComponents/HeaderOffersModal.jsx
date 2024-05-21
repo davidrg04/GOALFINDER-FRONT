@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import Modal from "../Modal";
 import { Select, Form, AutoComplete, Button, ConfigProvider } from "antd";
-import clubsData from "../../API/CLUBS/clubs.json";
+import clubsData from "../../assets/clubs.json";
 import { useGetOffers } from "../../functions/ApiCalls/getOffers";
 import {Spin} from "antd";
 import { LoadingOutlined } from '@ant-design/icons';

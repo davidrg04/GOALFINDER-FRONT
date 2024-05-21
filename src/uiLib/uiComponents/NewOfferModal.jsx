@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from "react";
 import Modal from "../Modal";
 import { Form,Input, Select, AutoComplete,DatePicker, Button, ConfigProvider, message } from "antd";
-import clubsData from "../../API/CLUBS/clubs.json";
+import clubsData from "../../assets/clubs.json";
 import RequiredFieldsText from "../RequiredFieldsText";
 import { useNewOffer } from "../../functions/ApiCalls/newOffer";
 const NewOfferModal = ({isOpen, isClose}) => {

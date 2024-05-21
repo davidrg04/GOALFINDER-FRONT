@@ -1,7 +1,7 @@
 import { React, useState, useEffect } from "react";
 import Modal from "../Modal";
 import { Input, Form, Select, Button, ConfigProvider, DatePicker, AutoComplete, message} from "antd";
-import citiesData from "../../API/UBICATIONS/arbol.json";
+import citiesData from "../../assets/arbol.json";
 import { Upload } from 'antd';
 import ImgCrop from 'antd-img-crop';
 import { LoadingOutlined, PlusOutlined } from "@ant-design/icons";

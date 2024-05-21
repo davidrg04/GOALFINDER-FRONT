@@ -4,7 +4,7 @@ import { Input, Form, Select, Button, ConfigProvider, DatePicker, message, Check
 import {useMutation, useQuery } from 'react-query';
 import RequiredFieldsText from "../RequiredFieldsText";
 import dayjs from 'dayjs';
-import clubsData from "../../API/CLUBS/clubs.json";
+import clubsData from "../../assets/clubs.json";
 import { jwtDecode } from "jwt-decode";
 
 
