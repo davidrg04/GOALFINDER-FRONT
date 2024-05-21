@@ -16,7 +16,7 @@ export default function Profile({profilePicture, name, idUser}) {
   return (
     <Dropdown placement="bottom-end">
           <DropdownTrigger>
-            <Avatar src={`http://localhost/GOALFINDER/src/API/ACCESS/users/user${idUser}/${profilePicture}`} className="border-2 border-emerald-600" />
+            <Avatar src={`https://goalfinder-back-production.up.railway.app/API/ACCESS/users/user${idUser}/${profilePicture}`} className="border-2 border-emerald-600" />
           </DropdownTrigger>
           <DropdownMenu aria-label="Profile Actions" variant="flat" className="bg-emerald-600 px-2 rounded-2xl dropDownProfileMenu shadow-emerald-700 shadow-lg">
             <DropdownItem key="profile" className="h-14 gap-2">

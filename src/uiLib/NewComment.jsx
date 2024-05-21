@@ -39,7 +39,7 @@ const NewComment = ({idPublication, updateData}) => {
     }
     return(
         <div className="flex border-t-2 border-emerald-600 rounded-b-2xl bg-gray-100 py-2 px-4 justify-center items-center gap-2">
-            <Avatar src={`http://localhost/GOALFINDER/src/API/ACCESS/users/user${userId}/${userProfilePicture}`} className="border-2 border-emerald-600" />
+            <Avatar src={`https://goalfinder-back-production.up.railway.app/API/ACCESS/users/user${userId}/${userProfilePicture}`} className="border-2 border-emerald-600" />
             <input type="text" value={comment}  onChange={(event) => handleComment(event.target.value)} placeholder="Escribe tu comentario..." className="border-2 bg-gray-200 rounded-2xl px-2 py-1 w-96"/>
             <IconoirProvider
                 iconProps={{

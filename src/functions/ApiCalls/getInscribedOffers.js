@@ -8,7 +8,7 @@ async function getInscribeOffers() {
         throw new Error('Error, no se encuentra el token de autenticación');
     }
 
-    const response = await fetch('http://localhost/GOALFINDER/src/API/OFFERS/getInscribedOffers.php', {
+    const response = await fetch('https://goalfinder-back-production.up.railway.app/API/OFFERS/getInscribedOffers.php', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',

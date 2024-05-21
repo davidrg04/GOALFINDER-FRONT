@@ -8,7 +8,7 @@ export const useDeleteComment = () => {
       throw new Error('Error, no se encuentra el token de autenticación');
   }
 
-    const response = await fetch('http://localhost/GOALFINDER/src/API/PUBLICATIONS/deleteComment.php', {
+    const response = await fetch('https://goalfinder-back-production.up.railway.app/API/PUBLICATIONS/deleteComment.php', {
       method: 'DELETE',
       headers: {
         Authorization: `Bearer ${jwt}`,

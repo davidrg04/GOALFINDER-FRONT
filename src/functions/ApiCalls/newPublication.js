@@ -12,7 +12,7 @@ export const useNewPublication = () => {
     formData.append('content', content);
     formData.append('file', file);
 
-    const response = await fetch('http://localhost/GOALFINDER/src/API/PUBLICATIONS/newPublication.php', {
+    const response = await fetch('https://goalfinder-back-production.up.railway.app/API/PUBLICATIONS/newPublication.php', {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${jwt}`,

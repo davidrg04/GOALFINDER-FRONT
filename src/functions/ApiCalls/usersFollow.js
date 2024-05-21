@@ -8,7 +8,7 @@ export const useUsersFollow = () => {
       throw new Error('Error, no se encuentra el token de autenticación');
   }
 
-    const response = await fetch('http://localhost/GOALFINDER/src/API/ACCESS/usersFollow.php', {
+    const response = await fetch('https://goalfinder-back-production.up.railway.app/src/API/ACCESS/usersFollow.php', {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${jwt}`,

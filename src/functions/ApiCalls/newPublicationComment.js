@@ -8,7 +8,7 @@ export const useNewPublicationComment = () => {
         throw new Error('Error, no se encuentra el token de autenticación');
     }
 
-    const response = await fetch('http://localhost/GOALFINDER/src/API/PUBLICATIONS/newCommentPublication.php', {
+    const response = await fetch('https://goalfinder-back-production.up.railway.app/API/PUBLICATIONS/newCommentPublication.php', {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${jwt}`,

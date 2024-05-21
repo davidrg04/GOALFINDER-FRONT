@@ -8,7 +8,7 @@ export const usePublicationLikes = () => {
       throw new Error('Error, no se encuentra el token de autenticación');
     }
 
-    const response = await fetch('http://localhost/GOALFINDER/src/API/PUBLICATIONS/publicationLikes.php', {
+    const response = await fetch('https://goalfinder-back-production.up.railway.app/API/PUBLICATIONS/publicationLikes.php', {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${jwt}`,

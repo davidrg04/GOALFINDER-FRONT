@@ -146,7 +146,7 @@ const LoginRegister = ({ onRegister }) => {
         }
     };
     const registerMutation = useMutation(data => {
-        return fetch("http://localhost/GOALFINDER/src/API/ACCESS/register.php", {
+        return fetch("https://goalfinder-back-production.up.railway.app/API/ACCESS/register.php", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -187,7 +187,7 @@ const LoginRegister = ({ onRegister }) => {
     
     
     const loginMutation = useMutation((data) => {
-        return fetch("http://localhost/GOALFINDER/src/API/ACCESS/login.php", {
+        return fetch("https://goalfinder-back-production.up.railway.app/API/ACCESS/login.php", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

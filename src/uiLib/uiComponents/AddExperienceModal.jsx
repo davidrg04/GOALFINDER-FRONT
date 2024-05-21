@@ -10,8 +10,8 @@ import { jwtDecode } from "jwt-decode";
 
 
 const AddExperienceModal = ({isOpen,isClose, use, initialValues = {} }) => {
-    const ADD_USER_EXPERIENCE_URL = 'http://localhost/GOALFINDER/src/API/ACCESS/addUserExperience.php';
-    const EDIT_USER_EXPERIENCE_URL = 'http://localhost/GOALFINDER/src/API/ACCESS/editUserExperience.php';
+    const ADD_USER_EXPERIENCE_URL = 'https://goalfinder-back-production.up.railway.app/API/ACCESS/addUserExperience.php';
+    const EDIT_USER_EXPERIENCE_URL = 'https://goalfinder-back-production.up.railway.app/API/ACCESS/editUserExperience.php';
     const [clubs, setClubs] = useState([]);
     const [selectedClub, setSelectedClub] = useState(null);
     const [inputClubValue, setInputClubValue] = useState("");
@@ -93,7 +93,7 @@ const AddExperienceModal = ({isOpen,isClose, use, initialValues = {} }) => {
             throw new Error('Error, no se encuentra el token de autenticación');
         }
     
-        const response = await fetch('http://localhost/GOALFINDER/src/API/ACCESS/getUserClub.php', {
+        const response = await fetch('https://goalfinder-back-production.up.railway.app/API/ACCESS/getUserClub.php', {
             method: 'GET', 
             headers: {
                 'Content-Type': 'application/json',

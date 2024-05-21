@@ -8,7 +8,7 @@ async function getUsersData( idUser ) {
         throw new Error('Error, no se encuentra el token de autenticación');
     }
 
-    const response = await fetch('http://localhost/GOALFINDER/src/API/ACCESS/getUsersDataPublications.php', {
+    const response = await fetch('https://goalfinder-back-production.up.railway.app/API/ACCESS/getUsersDataPublications.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

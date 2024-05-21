@@ -7,7 +7,7 @@ export const useChangePassword = () => {
       throw new Error('Error, no se encuentra el token de autenticación');
     }
 
-    const response = await fetch('http://localhost/GOALFINDER/src/API/ACCESS/changePassword.php', {
+    const response = await fetch('https://goalfinder-back-production.up.railway.app/API/ACCESS/changePassword.php', {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${jwt}`,

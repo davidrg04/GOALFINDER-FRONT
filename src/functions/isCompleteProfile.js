@@ -1,7 +1,7 @@
 import { useQuery } from 'react-query';
 
 async function fetchUserData(jwt) {
-  const response = await fetch('http://localhost/GOALFINDER/src/API/ACCESS/getUsersData.php', {
+  const response = await fetch('https://goalfinder-back-production.up.railway.app/API/ACCESS/getUsersData.php', {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',

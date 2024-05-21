@@ -17,7 +17,7 @@ export const useNewOffer = () => {
         endDate : endDate,
     };
 
-    const response = await fetch('http://localhost/GOALFINDER/src/API/OFFERS/newOffer.php', {
+    const response = await fetch('https://goalfinder-back-production.up.railway.app/API/OFFERS/newOffer.php', {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${jwt}`,

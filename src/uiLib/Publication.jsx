@@ -66,7 +66,7 @@ const Publication = ({isSave,isLike,updateDataUser,updateData,profileUse,complet
         <>
         <div className="w-2/3 mt-7 self-center min-w-96 border-2 border-emerald-600 rounded-xl bg-emerald-50 px-6 py-3 flex flex-col gap-3 shadow-xl shadow-emerald-950/15">
             <div className="flex gap-2">
-                <Avatar src={`http://localhost/GOALFINDER/src/API/ACCESS/users/user${idUser}/${data}`} size="lg" />
+                <Avatar src={`https://goalfinder-back-production.up.railway.app/API/ACCESS/users/user${idUser}/${data}`} size="lg" />
                 <div className="flex flex-col justify-center">
                    <Link to={`/profile/${idUser}`}>
                         <span className="text-emerald-950 font-bold transition-colors hover:cursor-pointer hover:text-emerald-900">{completeName}</span>
@@ -88,9 +88,9 @@ const Publication = ({isSave,isLike,updateDataUser,updateData,profileUse,complet
                 {content && <p className="text-lg ml-4 self-start text-emerald-950">{content}</p>}
                 {file &&
                     (mediaType == "photo") ? (
-                        <Image width={230} src={`http://localhost/GOALFINDER/src/API/ACCESS/users/user${idUser}/publications/${idPublication}/${file}`} alt = "publication"/>
+                        <Image width={230} src={`https://goalfinder-back-production.up.railway.app/API/ACCESS/users/user${idUser}/publications/${idPublication}/${file}`} alt = "publication"/>
                     ) : (
-                        <ReactPlayer url={`http://localhost/GOALFINDER/src/API/ACCESS/users/user${idUser}/publications/${idPublication}/${file}`} controls width="100%" height="100%"/>
+                        <ReactPlayer url={`https://goalfinder-back-production.up.railway.app/API/ACCESS/users/user${idUser}/publications/${idPublication}/${file}`} controls width="100%" height="100%"/>
                     )
                 }
             </div>

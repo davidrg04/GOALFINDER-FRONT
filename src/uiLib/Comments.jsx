@@ -35,7 +35,7 @@ const Comments = ({comment, idUser, idPublication, idComment, updateData}) => {
     return(
         <div className="bg-slate-100 flex flex-col gap-1 w-full p-2 rounded-lg shadow-2xl shadow-emerald-950/20">
             <div className="flex gap-2">
-                <Avatar src={`http://localhost/GOALFINDER/src/API/ACCESS/users/user${idUser}/${data?.profilePicture}`} className="border-2 border-emerald-600" />
+                <Avatar src={`https://goalfinder-back-production.up.railway.app/API/ACCESS/users/user${idUser}/${data?.profilePicture}`} className="border-2 border-emerald-600" />
                 <div className="flex flex-col justify-center gap-1">
                     <span className="text-emerald-950 font-semibold text-sm">{data?.name} {data?.surnames}</span>
                     <span className="-mt-2 text-emerald-950 font-light text-sm">@{data?.username}</span>

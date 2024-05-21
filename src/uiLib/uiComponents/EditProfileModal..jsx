@@ -83,7 +83,7 @@ const EditProfileModal = ({ isOpen, isClose}) => {
             throw new Error('Error, no se encuentra el token de autenticación');
         }
     
-        const response = await fetch('http://localhost/GOALFINDER/src/API/ACCESS/getUsersData.php', {
+        const response = await fetch('https://goalfinder-back-production.up.railway.app/API/ACCESS/getUsersData.php', {
             method: 'GET', 
             headers: {
                 'Content-Type': 'application/json',
@@ -110,7 +110,7 @@ const EditProfileModal = ({ isOpen, isClose}) => {
             throw new Error('Error, no se encuentra el token de autenticación');
         }
     
-        const response = await fetch('http://localhost/GOALFINDER/src/API/ACCESS/updateUserData.php', {
+        const response = await fetch('https://goalfinder-back-production.up.railway.app/API/ACCESS/updateUserData.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -155,7 +155,7 @@ const EditProfileModal = ({ isOpen, isClose}) => {
                 description: (data.description === "") ? "" : data.description,
             });
             if (data.profilePicture) {
-                setImagePath(`http://localhost/GOALFINDER/src/API/ACCESS/users/user${data.id}/${data.profilePicture}`);
+                setImagePath(`https://goalfinder-back-production.up.railway.app/API/ACCESS/users/user${data.id}/${data.profilePicture}`);
             }
         }
     }, [data, form]);
@@ -167,7 +167,7 @@ const EditProfileModal = ({ isOpen, isClose}) => {
             throw new Error('Error, no se encuentra el token de autenticación');
         }
     
-        const response = await fetch('http://localhost/GOALFINDER/src/API/ACCESS/getUserExperience.php', {
+        const response = await fetch('https://goalfinder-back-production.up.railway.app/API/ACCESS/getUserExperience.php', {
             method: 'GET', 
             headers: {
                 'Content-Type': 'application/json',
@@ -215,7 +215,7 @@ const EditProfileModal = ({ isOpen, isClose}) => {
         }
         console.log(idExperience);
 
-        const response = await fetch('http://localhost/GOALFINDER/src/API/ACCESS/deleteUserExperience.php', {
+        const response = await fetch('https://goalfinder-back-production.up.railway.app/API/ACCESS/deleteUserExperience.php', {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
@@ -373,7 +373,7 @@ const EditProfileModal = ({ isOpen, isClose}) => {
     };
 
     const checkUsernameAvailability = async (username) => {
-        const response = await fetch(`http://localhost/GOALFINDER/src/API/ACCESS/checkUsername.php?username=${username}`, {
+        const response = await fetch(`https://goalfinder-back-production.up.railway.app/API/ACCESS/checkUsername.php?username=${username}`, {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem("jwt")}`
@@ -439,7 +439,7 @@ const EditProfileModal = ({ isOpen, isClose}) => {
                                     <Upload
                                         progress={ { strokeColor: { '0%': '#108ee9', '100%': '#87d068' }, strokeWidth: 3, showInfo: false } }
                                         name="profilePicture"
-                                        action="http://localhost/GOALFINDER/src/API/ACCESS/uploadProfilePicture.php"
+                                        action="https://goalfinder-back-production.up.railway.app/API/ACCESS/uploadProfilePicture.php"
                                         headers={{
                                             Authorization: `Bearer ${localStorage.getItem("jwt")}`
                                         }}

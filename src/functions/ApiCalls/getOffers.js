@@ -8,7 +8,7 @@ async function getOffers(offerId) {
         throw new Error('Error, no se encuentra el token de autenticación');
     }
 
-    let url = 'http://localhost/GOALFINDER/src/API/OFFERS/getOffers.php';
+    let url = 'https://goalfinder-back-production.up.railway.app/API/OFFERS/getOffers.php';
     if (offerId) {
         url += `?id=${offerId}`;
     }

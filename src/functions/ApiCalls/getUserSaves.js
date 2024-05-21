@@ -8,7 +8,7 @@ async function getUserSaves() {
         throw new Error('Error, no se encuentra el token de autenticación');
     }
 
-    const response = await fetch('http://localhost/GOALFINDER/src/API/ACCESS/getUserSaves.php', {
+    const response = await fetch('https://goalfinder-back-production.up.railway.app/API/ACCESS/getUserSaves.php', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',

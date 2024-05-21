@@ -13,7 +13,7 @@ const ProfileExperiencesList = ({otherUser}) => {
         return(
             <div className="flex flex-col justify-center items-center mt-3">
                 <figure>
-                    <img src="http://localhost/GOALFINDER/src/assets/img/page-not-found.png" alt="Sin resultados"  className="w-64"/>
+                    <img src="http://goalfinder-front.vercel.app/src/assets/img/page-not-found.png" alt="Sin resultados"  className="w-64"/>
                     <figcaption className="text-emerald-950 text-2xl font-semibold text-center">No hay experiencias</figcaption>
                 </figure>
             </div>
@@ -33,7 +33,7 @@ const ProfileExperiencesList = ({otherUser}) => {
                     endDate={experience.endDate}
                     description={experience.description}
                     position={experience.position}
-                    url={`http://localhost/GOALFINDER/src/assets/img/CLUBS/${encodeURIComponent(experience.club)}.png`}
+                    url={`http://goalfinder-front.vercel.app/src/assets/img/CLUBS/${encodeURIComponent(experience.club)}.png`}
                 />
             ))}
         </div>

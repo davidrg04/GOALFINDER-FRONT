@@ -15,7 +15,7 @@ const UserSmallCard = ({idUser}) => {
     }
     return(
         <div className="flex gap-2">
-                <Avatar src={`http://localhost/GOALFINDER/src/API/ACCESS/users/user${idUser}/${data?.profilePicture}`} size="lg" />
+                <Avatar src={`https://goalfinder-back-production.up.railway.app/API/ACCESS/users/user${idUser}/${data?.profilePicture}`} size="lg" />
                 <div className="flex flex-col justify-center">
                     <Link to={`/profile/${idUser}`}>
                         <span className="text-emerald-950 font-bold transition-colors hover:cursor-pointer hover:text-emerald-900">{data?.name} {data?.surnames}</span>
