@@ -1,0 +1,34 @@
+import { useQuery } from 'react-query';
+import { message } from 'antd';
+
+async function getOffers(offerId) {
+    const jwt = localStorage.getItem('jwt');
+    if (!jwt) {
+        message.error('Error, no se encuentra el token de autenticación');
+        throw new Error('Error, no se encuentra el token de autenticación');
+    }
+
+    let url = 'http://localhost/GOALFINDER/src/API/OFFERS/getOffers.php';
+    if (offerId) {
+        url += `?id=${offerId}`;
+    }
+
+    const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${jwt}`
+        }
+    });
+
+    if (!response.ok) {
+        message.error('Error. No se pueden obtener los datos');
+        throw new Error('Error al obtener los datos del usuario');
+    }
+
+    return response.json();
+}
+
+export function useGetOffers(offerId) {
+    return useQuery(['offers', offerId], () => getOffers(offerId));
+}
