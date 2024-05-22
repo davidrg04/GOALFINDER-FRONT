@@ -187,7 +187,7 @@ const LoginRegister = ({ onRegister }) => {
     
     
     const loginMutation = useMutation((data) => {
-        return fetch("https://goalfinder-back-production.up.railway.app/API/ACCESS/login.php", {
+        return fetch("https://goalfinder-back-production.up.railway.app/var/www/html/API/ACCESS/login.php", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
